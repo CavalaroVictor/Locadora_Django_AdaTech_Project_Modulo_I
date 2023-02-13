@@ -5,4 +5,4 @@ from .models import Aluguel
 class AluguelForm(ModelForm):
     class Meta:
         model = Aluguel
-        fields = ['filme', 'descricao', 'ano_lancamento', 'valor', 'categoria', 'observacoes']
+        fields = ['filme', 'descricao', 'ano_lancamento', 'valor', 'categoria', 'disponivel', 'observacoes']

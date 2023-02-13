@@ -19,25 +19,30 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Filme</th>
-                <th scope="col">Valor</th>
+                <th scope="col">Valor R$</th>
                 <th scope="col">Categoria</th>
+                <th scope="col">Disponível para alugar?</th>
+                <th scope="col">Alugar</th>
             </tr>
             </thead>
             <tbody>
             {% for filme in filmes %}
             <tr> 
                                
-                <th scope="row">1</th>                
+                <th scope="row">{{ filme.id }}</th>                
                 <td><a href="{% url 'url_update' filme.id %}">{{ filme.filme }}</td>
                 <td>{{ filme.valor }}</td>
-                <td>{{ filme.categoria }}</td>  
+                <td>{{ filme.categoria }}</td>
+                <td>{{ filme.disponivel }}</td>  
+                <td><a href="{% url 'url_update' filme.id %}"><button type="button" class="btn btn-warning">Alugar</button></td>
                        
             </tr>
             {% endfor %}  
             </tbody>
         </table>          
     
-        <a href="{% url 'url_aluguel' %}"></a><button type="button" class="btn btn-primary">Novo Filme</button></a>
+        <a href="{% url 'url_aluguel' %}"><button type="button" class="btn btn-primary">Cadastrar Filme</button></a>
+        
     
 </body>
 </html>

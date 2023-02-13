@@ -16,6 +16,7 @@ class Aluguel(models.Model):
     ano_lancamento = models.DecimalField(max_digits=4, decimal_places=0)
     valor = models.DecimalField(max_digits=7, decimal_places=2)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    disponivel = models.BooleanField(null=True)
     observacoes = models.TextField(null=True, blank=True)
 
     class Meta:

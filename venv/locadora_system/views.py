@@ -26,7 +26,7 @@ def novo_aluguel(request):
 
     if form.is_valid():
         form.save()
-        return redirect('url_listagem')
+        return redirect('url_aluguel')
 
     data['form'] = form
     return render(request, 'locadora_system/form.html', data)
